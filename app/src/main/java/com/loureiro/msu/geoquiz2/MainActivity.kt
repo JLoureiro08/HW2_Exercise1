@@ -12,8 +12,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
 
-   // private lateinit var trueButton: Button
-   // private lateinit var falseButton: Button
+    // private lateinit var trueButton: Button
+    // private lateinit var falseButton: Button
 
     private val questionBank = listOf(
         Question(R.string.question_australia, true),
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       // setContentView(R.layout.activity_main)
+        // setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         //trueButton.setOnClickListener{view: View ->
         binding.trueButton.setOnClickListener{view: View ->
-           checkAnswer(true)
+            checkAnswer(true)
         }
         //falseButton.setOnClickListener{view: View ->
         binding.falseButton.setOnClickListener{view: View->
@@ -49,7 +49,12 @@ class MainActivity : AppCompatActivity() {
             updateQuestion()
         }
 
+        updateQuestion()
+
+        binding.previousButton.setOnClickListener{
+            currentIndex = (currentIndex - 1) % questionBank.size
             updateQuestion()
+        }
 
         binding.questionTextView.setOnClickListener{
             currentIndex = (currentIndex + 1) % questionBank.size
