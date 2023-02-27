@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GeoQuiz</string>
+    <string name="app_name">03_Activity Lifecycle</string>
     <string name="question_text">Canberra is the Capital of Australia.</string>
     <string name="true_button">True</string>
     <string name="false_button">False</string>
@@ -13,5 +13,8 @@
     <string name="question_africa">The source of the Nile River is in Egypt.</string>
     <string name="question_americas">The Amazon River is the longest river in the Americas.</string>
     <string name="question_asia">Lake Baikal is the world\'s oldest and deepest freshwater lake.</string>
+    <string name="score_toast">Score:</string>
+    <string name="reset_button">Reset</string>
+    <string name="grade_button">Grade</string>
 
 </resources>
